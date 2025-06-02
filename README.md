@@ -4,4 +4,4 @@ Welcome to my personal portfolio website! This platform highlights my skills, pr
 
 ## 🌐 Live Website
 
-Check it out live on Vercel: [khushi-bansal.portfolio.app]([https://khushi-bansal.vercel.app](https://my-portfolio-khushibansal635-3209s-projects.vercel.app/))
+Check it out live on Vercel: https://my-portfolio-khushibansal635-3209s-projects.vercel.app/

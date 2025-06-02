@@ -1,0 +1,278 @@
+/* Custom CSS for the portfolio */
+
+body {
+  padding-top: 76px; /* Account for fixed navbar */
+  font-family: "Inter", sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Profile Image */
+.profile-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+/* Cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress bars */
+.progress {
+  border-radius: 10px;
+  background-color: #e9ecef;
+  height: 8px;
+}
+
+.progress-bar {
+  border-radius: 10px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+/* Buttons */
+.btn {
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border: none;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, #5a6fd8, #6a4190);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  color: white;
+}
+
+.btn-outline-primary {
+  border: 2px solid #667eea;
+  color: #667eea;
+  background: transparent;
+}
+
+.btn-outline-primary:hover {
+  background: #667eea;
+  border-color: #667eea;
+  transform: translateY(-2px);
+  color: white;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-weight: 700;
+  color: #667eea !important;
+  font-size: 1.5rem;
+}
+
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #6c757d;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #667eea !important;
+}
+
+/* Contact Info */
+.contact-info i {
+  width: 20px;
+  text-align: center;
+}
+
+/* Social Links */
+.social-links a {
+  transition: color 0.3s ease, transform 0.3s ease;
+  color: #6c757d;
+  font-size: 1.2rem;
+  margin: 0 10px;
+}
+
+.social-links a:hover {
+  color: #667eea !important;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profile-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .hero-section {
+    padding: 2rem 0;
+    min-height: auto;
+  }
+
+  .display-4 {
+    font-size: 2.5rem;
+  }
+
+  body {
+    padding-top: 60px;
+  }
+}
+
+/* Custom primary color */
+:root {
+  --bs-primary: #667eea;
+  --bs-primary-rgb: 102, 126, 234;
+}
+
+.text-primary {
+  color: #667eea !important;
+}
+
+.bg-primary {
+  background: linear-gradient(45deg, #667eea, #764ba2) !important;
+}
+
+/* Badge styling */
+.badge {
+  font-weight: 500;
+  padding: 0.5em 0.75em;
+  border-radius: 20px;
+}
+
+/* Form styling */
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+/* Alert styling */
+.alert {
+  border-radius: 10px;
+  border: none;
+}
+
+.alert-success {
+  background-color: #d1edff;
+  color: #0c5460;
+  border-left: 4px solid #28a745;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-left: 4px solid #dc3545;
+}
+
+/* Section spacing */
+.section {
+  padding: 80px 0;
+}
+
+/* Skills section */
+.skill-item {
+  margin-bottom: 1.5rem;
+}
+
+.skill-name {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Project cards */
+.project-card {
+  height: 100%;
+}
+
+.project-image {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Footer */
+.footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 2rem 0;
+}
+
+.footer a {
+  color: #ecf0f1;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #667eea;
+}

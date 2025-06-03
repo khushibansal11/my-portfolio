@@ -1,4 +1,8 @@
 /* Custom CSS for the portfolio */
+html {
+  scroll-behavior: smooth;
+}
+
 
 body {
   padding-top: 76px; /* Account for fixed navbar */

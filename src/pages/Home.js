@@ -1,8 +1,12 @@
-import { Link } from "react-router-dom"
+import About from "./About"
+import Portfolio from "./Portfolio"
+import Contact from "./Contact"
+import Skills from "./Skills"
 
 const Home = () => {
   return (
-    <section className="hero-section">
+    <>
+    <section className="hero-section" id="home">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6 order-2 order-lg-1">
@@ -13,14 +17,14 @@ const Home = () => {
               learning to build innovative and impactful solutions.
             </p>
             <div className="d-flex flex-wrap gap-3 fade-in-up">
-              <Link to="/portfolio" className="btn btn-primary btn-lg">
+              <a href="#portfolio" className="btn btn-primary btn-lg">
                 <i className="fas fa-briefcase me-2"></i>
                 View My Work
-              </Link>
-              <Link to="/contact" className="btn btn-outline-primary btn-lg">
+              </a>
+              <a href="#contact" className="btn btn-outline-primary btn-lg">
                 <i className="fas fa-envelope me-2"></i>
                 Contact Me
-              </Link>
+              </a>
             </div>
           </div>
           <div className="col-lg-6 order-1 order-lg-2 text-center mb-4 mb-lg-0">
@@ -35,6 +39,11 @@ const Home = () => {
         </div>
       </div>
     </section>
+    <About id="about" />
+    <Portfolio id="portfolio" />
+    <Skills id="skills" />
+    <Contact id="contact" />
+    </>
   )
 }
 

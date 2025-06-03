@@ -8,12 +8,13 @@ const Navbar = () => {
   const location = useLocation()
 
   const navigation = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Portfolio", path: "/portfolio" },
-    { name: "Skills", path: "/skills" },
-    { name: "Contact", path: "/contact" },
-  ]
+  { name: "Home", path: "#home" },
+  { name: "About", path: "#about" },
+  { name: "Portfolio", path: "#portfolio" },
+  { name: "Skills", path: "#skills" },
+  { name: "Contact", path: "#contact" },
+]
+
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen)
@@ -40,16 +41,16 @@ const Navbar = () => {
         <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`} id="navbarNav">
           <ul className="navbar-nav ms-auto">
             {navigation.map((item) => (
-              <li className="nav-item" key={item.name}>
-                <Link
-                  className={`nav-link ${location.pathname === item.path ? "active" : ""}`}
-                  to={item.path}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
+            <li className="nav-item" key={item.name}>
+              <a
+                className={`nav-link ${location.hash === `#${item.path.slice(1)}` ? "active" : ""}`}
+                href={`#${item.path.slice(1)}`}
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
           </ul>
         </div>
       </div>
